@@ -16,6 +16,7 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
   loginForm!: FormGroup;
+  errorMessage: string = '';
   constructor(
     private _authService: AuthService,
     private fb: FormBuilder,
@@ -40,10 +41,15 @@ export class LoginComponent implements OnInit {
           this._authService.setToken(res.token);
           this.router.navigateByUrl('/home');
         },
-        (error) => {
+        (error: any) => {
           this._sharedService.loading$.next(false);
+          this.errorMessage = error.error.message;
         }
       );
+  }
+
+  removeError() {
+    this.errorMessage = '';
   }
 
   get usernameCtrl() {

@@ -11,3 +11,28 @@ form {
   flex-direction: column;
   gap: 10px;
 }
+
+.message {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  background-color: #ffe7e6;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  width: 20%;
+  border-left: 4px solid #ff5757;
+}
+i {
+  padding-inline-start: 5px;
+  font-weight: 900;
+  color: #ff5757;
+}
+
+.message span {
+  color: #ff5757;
+  font-weight: 900;
+}
+.message p {
+  color: #ff5757;
+}

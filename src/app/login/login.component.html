@@ -1,12 +1,18 @@
 <div class="container">
   <h1>Login</h1>
   <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-    <input formControlName="username" pInputText placeholder="username" />
+    <input
+      formControlName="username"
+      pInputText
+      placeholder="username"
+      (focus)="removeError()"
+    />
     <input
       formControlName="password"
       pInputText
       placeholder="password"
       type="password"
+      (focus)="removeError()"
     />
     <p-button
       type="Submit"
@@ -14,4 +20,10 @@
       [disabled]="!loginForm.valid"
     ></p-button>
   </form>
+</div>
+
+<div class="message" *ngIf="errorMessage">
+  <i class="pi pi-times-circle" style="font-size: 1rem"></i>
+  <span> Error</span>
+  <p>{{ errorMessage }}</p>
 </div>

@@ -14,9 +14,24 @@ import { HomeComponent } from './home/home.component';
 import { ProductsComponent } from './products/products.component';
 import { ProductComponent } from './product/product.component';
 import { NavbarComponent } from './shared/components/navbar/navbar/navbar.component';
+import { ErrorComponent } from './shared/components/error/error/error.component';
+import { CardModule } from 'primeng/card';
+import { MessagesModule } from 'primeng/messages';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ShortenPipe } from './shared/pipes/shorten.pipe';
 
 @NgModule({
-  declarations: [AppComponent, LoginComponent, LoaderComponent, HomeComponent, ProductsComponent, ProductComponent, NavbarComponent],
+  declarations: [
+    AppComponent,
+    LoginComponent,
+    LoaderComponent,
+    HomeComponent,
+    ProductsComponent,
+    ProductComponent,
+    NavbarComponent,
+    ErrorComponent,
+    ShortenPipe,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -25,6 +40,9 @@ import { NavbarComponent } from './shared/components/navbar/navbar/navbar.compon
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    CardModule,
+    MessagesModule,
+    NgbModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

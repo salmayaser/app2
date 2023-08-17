@@ -1,0 +1,15 @@
+.products {
+  margin: 20px 0px;
+}
+img {
+  height: 200px;
+}
+
+h1 {
+  text-align: center;
+  margin: 20px 0px;
+}
+
+.product {
+  padding: 20px;
+}
